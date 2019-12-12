@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_movie_list.*
 
 class MovieListActivity : AppCompatActivity() {
     companion object {
-        val EXTRA_MOVIE_ID = "MOVIE_ID_EXTRA" //anstatt text view über rating bar soll movie name stehen
+        val EXTRA_MOVIE_ID = "MOVIE_ID_EXTRA"
         val ADD_OR_EDIT_RATING_REQUEST = 1
     }
     val movieAdapter = MovieAdapter() {
@@ -19,6 +19,8 @@ class MovieListActivity : AppCompatActivity() {
         startActivityForResult(intent, ADD_OR_EDIT_RATING_REQUEST)
         Toast.makeText(this, "Movie with title: ${it.title} has been clicked", Toast.LENGTH_LONG).show()
     }
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
